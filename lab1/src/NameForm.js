@@ -21,11 +21,11 @@ class NameForm extends React.Component {
         const tester = /^[a-zA-Z\s]*$/;
 
         if((tester.test(this.state.value))==true){
-            alert('Hello ' + this.state.value);
+            //alert('Hello ' + this.state.value);
             this.viable = 1;
         }
         else{
-            alert('Please use only letters and spaces.');
+            //alert('Please use only letters and spaces.');
             this.viable = 2;
         }
         event.preventDefault();
