@@ -90,15 +90,17 @@ const styles = StyleSheet.create({
   	{
     	margin:30,
     	height:75,
-    	fontSize:20
+		fontSize:20,
+		backgroundColor:'black',
+		color: 'white',
   	},
   	defaultText:
   	{
-    	fontSize:20
+		fontSize:20,
   	},
   	container: {
  		flex: 1,
-    	backgroundColor: '#fff',
+    	backgroundColor: '#FFC0F3',
     	alignItems: 'center',
     	justifyContent: 'center',
   	},
