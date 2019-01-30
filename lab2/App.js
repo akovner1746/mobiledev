@@ -48,14 +48,20 @@ export default class App extends React.Component {
 			if(displayName == false){
 				//console.log("Display Wrong");
 				return (
-					<Text style={styles.youreWrong}>Please use only letters and spaces</Text>
+					<View style={styles.container} flexDirection="column" alignItems='stretch'>
+						<View><TextInput style={styles.textInput} onChangeText={this.onChange} placeholder="Enter your name"></TextInput></View>
+						<TouchableOpacity style={styles.buttonStyle} onPress={this.onPress}><Text style={styles.buttonText}>Submit</Text></TouchableOpacity>
+						<Text style={styles.youreWrong}>Please use only letters and spaces</Text>
+					</View>
 				);
 			}
 			else if(displayName == true){
 				//console.log("Display Name");
 				//console.log(this.name.value);
 				return (
-					<Text style={styles.worksFine}>{'Hi '}{this.name}</Text>
+					<View style={styles.container} flexDirection="column" alignItems='stretch'>
+						<Text style={styles.worksFine}>{'Hi '}{this.name}</Text>
+					</View>
 				);
 			}
 		}
@@ -105,14 +111,10 @@ const styles = StyleSheet.create({
     	justifyContent: 'center',
   	},
   	youreWrong: {
-		margin: 100,
-		height: 75,
 		color: 'red',
 		fontSize: 20,
 	},
 	worksFine: {
-		margin: 100,
-		height: 75,
 		color: 'black',
 		fontSize: 20,
 	}  
