@@ -13,15 +13,15 @@ export default class App extends React.Component {
 		this.onChange = this.onChange.bind(this);
   	}
   	onChange(event) {
-		console.log(event);
+		//console.log(event);
 		this.state = {value: event};
   	}
   
   	onPress(event) {
-		console.log("Pressed");
+		//console.log("Pressed");
 		this.submitted = true;
-		console.log(this.state);
-		console.log(this.submitted);
+		//console.log(this.state);
+		//console.log(this.submitted);
 		const tester = /^[a-zA-Z\s]*$/;
 
 		if((tester.test(this.state.value))==false){
@@ -30,37 +30,37 @@ export default class App extends React.Component {
 		else{
 			this.viable = true;
 		}
-		console.log(this.viable);
-		console.log(this.state);
+		//console.log(this.viable);
+		//console.log(this.state);
 		event.preventDefault;
-		console.log(this.state);
+		//console.log(this.state);
 		this.name = this.state.value;
 		this.setState({state: this.state});
-		console.log(this.state);
+		//console.log(this.state);
 	}
 	
   	render() {		
 		const displayQ = this.submitted;
 		const displayName = this.viable;
-		console.log(this.name);
+		//console.log(this.name);
 
 		if(displayQ == true){
 			if(displayName == false){
-				console.log("Display Wrong");
+				//console.log("Display Wrong");
 				return (
 					<Text style={styles.youreWrong}>Please use only letters and spaces</Text>
 				);
 			}
 			else if(displayName == true){
-				console.log("Display Name");
-				console.log(this.name.value);
+				//console.log("Display Name");
+				//console.log(this.name.value);
 				return (
 					<Text style={styles.worksFine}>{'Hi '}{this.name}</Text>
 				);
 			}
 		}
 		else if(displayQ == false){
-			console.log("Display Question")
+			//console.log("Display Question")
 			return (
 				<View style={styles.container} flexDirection="column" alignItems='stretch'>
 				<View><TextInput style={styles.textInput} onChangeText={this.onChange} placeholder="Enter your name"></TextInput></View>
@@ -106,11 +106,13 @@ const styles = StyleSheet.create({
   	},
   	youreWrong: {
 		margin: 100,
+		height: 75,
 		color: 'red',
 		fontSize: 20,
 	},
 	worksFine: {
 		margin: 100,
+		height: 75,
 		color: 'black',
 		fontSize: 20,
 	}  
