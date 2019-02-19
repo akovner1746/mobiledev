@@ -14,7 +14,7 @@ class NameForm extends React.Component {
     handleChange(event) {
         this.setState({value: event.target.value});
     }
-  
+
     handleSubmit(event) {
         this.submitted = true;
         this.name = this.state;
