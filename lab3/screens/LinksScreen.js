@@ -32,7 +32,7 @@ export default class LinksScreen extends React.Component {
       <ImageBackground source={require('../assets/images/pinksparkles.jpg')} style={{width:'100%', height:'100%'}}>
         <View style={styles.getStartedContainer}>
           <Image source={require('../assets/images/rapunzel.jpg')} style={{width:200,height:200}} />
-          <Text style={styles.getStartedText}>I love Disney Princesses</Text>
+          <Text style={styles.getStartedText}>Rapunzel is from Tangled, released in 2010.</Text>
         </View>
         </ImageBackground>
       </ScrollView>
@@ -43,7 +43,7 @@ export default class LinksScreen extends React.Component {
       <ImageBackground source={require('../assets/images/pinksparkles.jpg')} style={{width:'100%', height:'100%'}}>
         <View style={styles.container}>
           <Image source={require('../assets/images/belle.jpg')} style={{width:200,height:200}} />
-          <Text style={styles.getStartedText}>I love Disney Princesses</Text>
+          <Text style={styles.getStartedText}>Belle is from Beauty and the Beast, released in 1991.</Text>
         </View>
         </ImageBackground>
       </ScrollView>
