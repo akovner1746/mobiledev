@@ -3,7 +3,6 @@ import {
   StyleSheet,
   Text,
   View,
-  TextInput,
   AsyncStorage,
   Location,
   TouchableOpacity
@@ -13,7 +12,6 @@ import * as Expo from "expo";
 import Forecast from "./Forecast";
 import getLocation from "./getLocation";
 import textStyles from "./styles/typography.js";
-
 
 const STORAGE_KEY = "@SmarterWeather:zip";
 
@@ -284,7 +282,7 @@ class WeatherProject extends Component {
             main={this.state.forecast.main}
             temp={this.state.forecast.temp}
           />
-        <Text>F</Text>
+        <Text></Text>
         </View>
         );
       }
@@ -297,10 +295,6 @@ class WeatherProject extends Component {
 
             <View style={styles.row}>
               <Button onPress={this.checkMultiPermissions} label="Choose Image"></Button>
-            </View>
-
-            <View style={styles.row}>
-              <TextInput></TextInput>
             </View>
 
             <View style={styles.row}>
