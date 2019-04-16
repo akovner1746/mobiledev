@@ -14,9 +14,17 @@ export default class LinksScreen extends React.Component {
   static navigationOptions = {
     title: 'Princess',
   };
+  _gotoScreen = (item) => {
+    console.log(favoriteList)
+    this.props.navigation.navigate("Details", item)
+  }
 
   render() {
-    if(this.props.navigation.state.params.name == 'ariel'){ return(
+    const {navigate} = this.props.navigation;
+
+    
+
+    if(this.props.navigation.state.params.name == 'junglecruise'){ return(
       <ScrollView style={styles.container}>
       <ImageBackground source={require('../assets/images/pinksparkles.jpg')} style={{width:'100%', height:'100%'}}>
         <View style={styles.getStartedContainer}>
@@ -26,7 +34,7 @@ export default class LinksScreen extends React.Component {
         </ImageBackground>
       </ScrollView>
     )}
-    else if(this.props.navigation.state.params.name == 'rapunzel'){
+    else if(this.props.navigation.state.params.name == 'kali'){
       return(
       <ScrollView style={styles.container}>
       <ImageBackground source={require('../assets/images/pinksparkles.jpg')} style={{width:'100%', height:'100%'}}>
@@ -37,7 +45,7 @@ export default class LinksScreen extends React.Component {
         </ImageBackground>
       </ScrollView>
     )}
-    else if(this.props.navigation.state.params.name == 'belle'){
+    else if(this.props.navigation.state.params.name == 'ass'){
       return(
       <ScrollView style={styles.container}>
       <ImageBackground source={require('../assets/images/pinksparkles.jpg')} style={{width:'100%', height:'100%'}}>
