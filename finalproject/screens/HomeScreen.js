@@ -134,7 +134,7 @@ export default class HomeScreen extends React.Component {
         <Button
           title = "Favorites"
           onPress = {
-            () => navigate("FavoritesList.js")
+            () => navigate("FavoritesList")
           }
         />
         <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
